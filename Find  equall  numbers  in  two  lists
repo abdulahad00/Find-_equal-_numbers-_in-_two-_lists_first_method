@@ -1,0 +1,49 @@
+import 'dart:io';
+void main() {
+var size=0;
+var input1=0;
+var input2=0;
+var input3=0;
+var list1 = [];
+var list2 = [];
+var equal = [];
+// here take values for lists//
+print("Enter your size for creating two lists");
+size=int.parse(stdin.readLineSync()!);
+print("Enter $size numbers for fist list");
+for(var i=0; i<size; i++)
+{
+input1=int.parse(stdin.readLineSync()!);
+list1.add(input1);
+}
+print("You Enter following $size numbers for first list");
+print(list1);
+
+print("Enter $size numbers for second list");
+for(var i=0; i<size; i++)
+{
+input2=int.parse(stdin.readLineSync()!);
+list2.add(input2);
+}
+print("you enter following $size numbers for second list");
+print(list2);
+
+// here start find equal numbers in lists//
+
+
+for(var i=0; i<size; i++)
+{
+if(list1[i] == list2[i])
+{
+input3=list1[i];
+equal.add(input3);
+print("Following numbers are equal in both lists");
+print(equal);
+}
+else
+{
+print("No equal any numbers");
+break;
+}
+}
+}
